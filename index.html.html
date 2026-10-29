@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Akshay Somani | Portfolio 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --surface:#f5f7fc; --ink:#1a2233; --muted:#5a6475; --rule:#d5dbec; --accent:#2f4ba8; --tile:#e9eefb; --tile-ink:#2f4ba8;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#10141f;--surface:#171c2b;--ink:#e8ecf6;--muted:#9aa4b8;--rule:#2a3350;--accent:#8aa2f0;--tile:#1c2440;--tile-ink:#8aa2f0}
+}
+:root[data-theme="dark"]{--bg:#10141f;--surface:#171c2b;--ink:#e8ecf6;--muted:#9aa4b8;--rule:#2a3350;--accent:#8aa2f0;--tile:#1c2440;--tile-ink:#8aa2f0}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "Work Sans",system-ui,sans-serif}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--rule);z-index:5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+header .wrap{display:flex;justify-content:space-between;align-items:center;min-height:64px;gap:16px;flex-wrap:wrap}
+.brand{font:500 1.35rem "Newsreader",Georgia,serif;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:26px}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--accent)}
+section{padding:72px 0 8px}
+h1,h2,h3{font-family:"Newsreader",Georgia,serif;font-weight:500;margin:0;line-height:1.15}
+h1{font-size:clamp(2.6rem,6vw,4rem);letter-spacing:-.01em}
+h2{font-size:1.9rem;text-align:center;padding-bottom:14px;border-bottom:1px solid var(--rule);margin-bottom:8px}
+h3{font-size:1.35rem}
+.hero{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center;padding-top:56px}
+.avatar{aspect-ratio:1;background:var(--surface);border:1px solid var(--rule);display:grid;place-items:center;font:500 5rem "Newsreader",serif;color:var(--accent)}
+.role{color:var(--accent);font-weight:500;margin:10px 0 18px}
+.hero p{max-width:60ch;margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{font-size:.82rem;padding:3px 12px;border:1px solid var(--rule);border-radius:99px;color:var(--muted);background:var(--bg)}
+.strip-wrap{position:relative;margin-top:56px}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px}
+.strip::-webkit-scrollbar{display:none}
+.slide{flex:0 0 calc((100% - 32px)/3);min-width:240px;scroll-snap-align:start;background:var(--tile);color:var(--tile-ink);aspect-ratio:4/3;display:grid;place-items:center;position:relative;text-decoration:none}
+.slide span{position:absolute;left:12px;bottom:10px;font-size:.85rem;font-weight:500;color:var(--ink)}
+.slide svg{width:70%;height:70%}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);cursor:pointer;font-size:1.2rem;border-radius:50%}
+.arrow.l{left:-16px}.arrow.r{right:-16px}
+.item{display:grid;grid-template-columns:220px 1fr;gap:32px;padding:32px 0;border-bottom:1px solid var(--rule)}
+.item .tile{background:var(--tile);color:var(--tile-ink);aspect-ratio:1;display:grid;place-items:center}
+.item .tile svg{width:78%;height:78%}
+.meta{font-size:.85rem;color:var(--muted);font-style:italic;margin:4px 0 10px}
+.item p{margin:0 0 12px;max-width:68ch}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin:14px 0}
+.facts div{font-size:.85rem;color:var(--muted)}
+.facts b{display:block;font:500 1.6rem "Newsreader",serif;color:var(--ink)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-top:28px}
+h4{font:600 1rem "Work Sans",sans-serif;margin:0 0 10px}
+ul.plain{margin:0 0 24px;padding-left:18px}
+ul.plain li{margin-bottom:6px}
+ul.plain li span{color:var(--muted)}
+.about{display:grid;grid-template-columns:260px 1fr;gap:48px;padding-top:28px}
+.side{background:var(--surface);border:1px solid var(--rule);padding:22px;align-self:start}
+.side p{margin:0 0 14px;font-size:.92rem;word-break:break-word}
+.side small{display:block;color:var(--muted);font-size:.8rem}
+footer{margin-top:72px;border-top:1px solid var(--rule);padding:24px 0 32px;color:var(--muted);font-size:.88rem}
+#board{display:grid;grid-template-columns:repeat(8,1fr);width:72%;aspect-ratio:1;border:1.5px solid currentColor}
+#board i{border:.5px solid currentColor;opacity:.9;display:grid;place-items:center;font:normal 500 .8rem "Work Sans",sans-serif}
+.course{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.course p{margin:0;max-width:68ch}
+.essay{max-width:68ch;margin:0 auto;padding-top:28px}
+.essay p{margin:0 0 16px;font-family:"Newsreader",Georgia,serif;font-size:1.12rem;line-height:1.75}
+@media (max-width:760px){
+  .hero,.about,.grid2{grid-template-columns:1fr;gap:28px}
+  .avatar{max-width:200px}
+  .item{grid-template-columns:1fr;gap:16px}
+  .course{grid-template-columns:1fr;gap:6px}
+  .item .tile{aspect-ratio:16/9}
+  .slide{flex-basis:80%}
+  .arrow{display:none}
+  nav{gap:18px;flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#home">Akshay Somani</a>
+    <nav aria-label="Main">
+      <a href="#home">Home</a><a href="#projects">Projects</a><a href="#courses">Courses</a><a href="#writing">Writing</a><a href="#about">About me</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="home" style="padding-top:0">
+    <div class="hero">
+      <div class="avatar" role="img" aria-label="Photo placeholder">AS</div>
+      <div>
+        <h1>Akshay Somani</h1>
+        <p class="role">B.Tech CSE, AI &amp; Data Engineering</p>
+        <p>I’m a first-year student at Vellore Institute of Technology (VIT). I build small, working things in Python: a stress tracker, a plant-disease scanner and a bigger-board tic-tac-toe.</p>
+        <p>Right now I’m learning how AI and data fit together. This site collects what I’ve built so far, what I use, and where I want to go next.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">HTML</span><span class="tag">Machine Learning</span><span class="tag">Data Engineering</span></div>
+      </div>
+    </div>
+
+    <div class="strip-wrap">
+      <button class="arrow l" aria-label="Previous" onclick="scrollStrip(-1)">‹</button>
+      <div class="strip" id="strip">
+        <a class="slide" href="#mindload"><svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12v66h104" opacity=".4"/><path d="M14 58 30 40 44 52 62 26 80 44 98 22"/><circle cx="98" cy="22" r="4" fill="currentColor"/></svg><span>MindLoad</span></a>
+        <a class="slide" href="#leaf"><svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M22 70C20 32 48 12 98 16 100 62 72 82 22 70Z"/><path d="M22 70 76 34" /><path d="M46 52 50 36M58 44 70 52M40 60 36 46" opacity=".6"/></svg><span>Plant leaf disease detection</span></a>
+        <a class="slide" href="#ttt"><svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="2"><rect x="25" y="5" width="80" height="80" opacity=".5"/><path d="M45 5v80M65 5v80M85 5v80M25 25h80M25 45h80M25 65h80" opacity=".5"/><path d="M30 10l10 10m0-10L30 20M70 50l10 10m0-10L70 60" stroke-width="3"/><circle cx="55" cy="35" r="5" stroke-width="3"/><circle cx="95" cy="75" r="5" stroke-width="3"/></svg><span>8x8 Tic-Tac-Toe</span></a>
+      </div>
+      <button class="arrow r" aria-label="Next" onclick="scrollStrip(1)">›</button>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="item" id="mindload">
+      <div class="tile"><svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12v66h104" opacity=".4"/><path d="M14 58 30 40 44 52 62 26 80 44 98 22"/><circle cx="98" cy="22" r="4" fill="currentColor"/></svg></div>
+      <div>
+        <h3>MindLoad</h3>
+        <div class="meta">Python · Wellbeing</div>
+        <p>A Python project that analyses a person’s stress and anxiety and keeps a record of it, so changes over time are easy to look back on.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Record keeping</span><span class="tag">Wellbeing</span></div>
+      </div>
+    </article>
+
+    <article class="item" id="leaf">
+      <div class="tile"><svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M22 70C20 32 48 12 98 16 100 62 72 82 22 70Z"/><path d="M22 70 76 34"/><path d="M46 52 50 36M58 44 70 52M40 60 36 46" opacity=".6"/></svg></div>
+      <div>
+        <h3>Plant Leaf Disease Detection (CNN)</h3>
+        <div class="meta">Part of a team project on smart irrigation and plant disease detection</div>
+        <p>A convolutional neural network in Python that scans a leaf image, studies its pattern and says whether the plant is healthy or diseased. Trained on the PlantVillage dataset.</p>
+        <div class="facts"><div><b>54,305</b>images</div><div><b>38</b>classes</div><div><b>~91%</b>validation accuracy</div></div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">CNN</span><span class="tag">Keras</span><span class="tag">Computer Vision</span></div>
+      </div>
+    </article>
+
+    <article class="item" id="ttt">
+      <div class="tile" style="color:var(--tile-ink)"><div id="board" aria-label="8 by 8 tic-tac-toe board"></div></div>
+      <div>
+        <h3>8x8 Tic-Tac-Toe</h3>
+        <div class="meta">Game logic · Grid board</div>
+        <p>Tic-tac-toe stretched onto an 8x8 grid. The bigger board cuts down draws and makes the game far more intense and strategic than the classic 3x3.</p>
+        <div class="tags"><span class="tag">Game logic</span><span class="tag">Grid board</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section id="courses">
+    <h2>Courses</h2>
+    <div class="course"><h3>Python</h3><p>The language behind all three of my projects, from the stress tracker to the CNN.</p></div>
+    <div class="course"><h3>Multivariable Calculus</h3><p>Partial derivatives and gradients, the maths that lets a neural network learn by adjusting its weights.</p></div>
+    <div class="course"><h3>Engineering Physics</h3><p>Describing real systems with equations and checking models against measurements.</p></div>
+    <div class="course"><h3>Basic Engineering</h3><p>Breaking a problem into parts and designing a solution step by step.</p></div>
+    <div class="course"><h3>Technical English</h3><p>Writing clearly and precisely about technical work, which I practise in the write-up below.</p></div>
+  </section>
+
+  <section id="writing">
+    <h2>Writing</h2>
+    <article class="essay">
+      <h3 style="margin-bottom:18px">What I learned building a plant disease detector</h3>
+      <p>When I started the leaf disease project, I thought the hard part would be the neural network. It turned out that the network was only half of the story. The other half was the data.</p>
+      <p>A convolutional neural network learns by looking at many labelled images and picking up the patterns that separate one class from another. We trained ours on the PlantVillage dataset, which has 54,305 leaf images across 38 classes. Seeing a model reach about 91% validation accuracy was exciting, but it also taught me to read that number carefully. It tells me how well the model does on images it was not trained on, from the same collection. It does not promise the same result on a photo taken in a real field, with different light and a messier background.</p>
+      <p>That lesson is why I am drawn to data engineering. A model can only be as useful as the data that feeds it, so collecting, storing and cleaning data deserves as much care as the model itself. The project was also part of a team effort on smart irrigation and plant disease detection, and it showed me how one piece of work fits into a bigger system.</p>
+      <p>Next, I want to keep building small projects like this one, and learn how to prepare data properly so that the results I report are ones I can trust.</p>
+    </article>
+  </section>
+
+  <section id="skills">
+    <h2>Skills &amp; direction</h2>
+    <div class="grid2">
+      <div>
+        <h4>Skills I use today</h4>
+        <ul class="plain"><li>Python</li><li>HTML</li></ul>
+        <h4>Focus areas</h4>
+        <ul class="plain"><li>Artificial Intelligence</li><li>Data Engineering</li><li>Problem Solving</li></ul>
+      </div>
+      <div>
+        <h4>Interests</h4>
+        <ul class="plain">
+          <li>AI &amp; machine learning <span>– teaching programs to recognise patterns, like disease in a leaf image.</span></li>
+          <li>Data engineering <span>– collecting, storing and cleaning data so models can actually use it.</span></li>
+          <li>AI for everyday wellbeing <span>– tools like MindLoad that turn personal data into useful insight.</span></li>
+          <li>Game logic &amp; algorithms <span>– designing the rules and win checks that make bigger boards work.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about">
+      <aside class="side" id="contact">
+        <h4>Contact</h4>
+        <p><small>Email</small><a href="mailto:akshay.somani2026@vitstudent.ac.in">akshay.somani2026@vitstudent.ac.in</a></p>
+        <p><small>GitHub</small><a href="https://github.com/akshaysomani2026-creator">github.com/akshaysomani2026-creator</a></p>
+        <p><small>LinkedIn</small>Akshay Somani</p>
+      </aside>
+      <div>
+        <h4>Background</h4>
+        <p>I’m studying B.Tech in Computer Science &amp; Engineering with a specialisation in AI &amp; Data Engineering at Vellore Institute of Technology (VIT). I’m in my first year and I learn best by building small projects and seeing them work.</p>
+        <h4>Education</h4>
+        <ul class="plain"><li>B.Tech, Computer Science &amp; Engineering (AI &amp; Data Engineering), VIT, first year</li></ul>
+        <h4>Let’s connect</h4>
+        <p>I’m open to projects, collaborations and learning from others. If you’re building something with Python, AI or data, I’d like to hear about it.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">Akshay Somani | Portfolio 2026</div></footer>
+
+<script>
+function scrollStrip(d){var s=document.getElementById('strip');s.scrollBy({left:d*(s.clientWidth/2+16),behavior:'smooth'})}
+(function(){
+  var b=document.getElementById('board'),m={9:'X',18:'O',27:'X',36:'O',45:'X',20:'O',29:'X',38:'X',47:'O'};
+  for(var i=0;i<64;i++){var c=document.createElement('i');c.textContent=m[i]||'';b.appendChild(c)}
+})();
+</script>
+</body>
+</html>
